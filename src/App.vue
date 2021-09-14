@@ -21,14 +21,8 @@ export default {
 </script>
 
 <style>
-#app{
+#app {
   background-image: url('./assets/bg.jpg');
-  @apply min-h-screen bg-cover bg-center
-}
-.glass-morphism {
-  @apply bg-white bg-opacity-70 backdrop-filter backdrop-blur-lg
-}
-.primary-button {
-  @apply text-transparent bg-clip-text bg-gradient-to-r from-meridian-start to-meridian-end
+  @apply min-h-screen w-screen bg-cover bg-center
 }
 </style>

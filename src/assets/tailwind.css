@@ -3,3 +3,24 @@
 @tailwind components;
 
 @tailwind utilities;
+
+@layer base {
+    router-link {
+
+    }
+}
+
+@layer components {
+    .outlined-button {
+        @apply m-2 px-3 py-2 border-2 border-green-600 rounded-lg cursor-pointer text-green-900 hover:bg-green-600 hover:text-green-200 transition-all duration-300
+    }
+}
+
+@layer utilities {
+    .text-meridian-gradient {
+        @apply text-transparent bg-clip-text bg-gradient-to-r from-meridian-start to-meridian-end !important
+    }
+    .bg-glass-morphic {
+        @apply bg-opacity-75 backdrop-filter backdrop-blur-lg !important
+    }
+}
