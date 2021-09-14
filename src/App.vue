@@ -1,30 +1,34 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <TheHeader />
+  <div class="min-h-full w-full">
+    <router-view :key="this.staticData" />
   </div>
-  <router-view/>
 </template>
 
+<script>
+import TheHeader from "@/components/TheHeader/TheHeader";
+
+const staticData = require("@/data");
+export default {
+  name: 'App',
+  components: {
+    TheHeader
+  },
+  data() {
+    return staticData
+  }
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+#app{
+  background-image: url('./assets/bg.jpg');
+  @apply min-h-screen bg-cover bg-center
 }
-
-#nav {
-  padding: 30px;
+.glass-morphism {
+  @apply bg-white bg-opacity-70 backdrop-filter backdrop-blur-lg
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.primary-button {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-meridian-start to-meridian-end
 }
 </style>
