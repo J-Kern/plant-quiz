@@ -4,15 +4,9 @@
 
 @tailwind utilities;
 
-@layer base {
-    router-link {
-
-    }
-}
-
 @layer components {
     .outlined-button {
-        @apply m-2 px-3 py-2 border-2 border-green-600 rounded-lg cursor-pointer text-green-900 hover:bg-green-600 hover:text-green-200 transition-all duration-300
+        @apply mx-4 my-2 px-4 py-2 border-2 border-green-600 rounded-lg cursor-pointer text-green-900 hover:bg-green-600 hover:text-green-200 transition-all duration-300 text-xl
     }
 }
 

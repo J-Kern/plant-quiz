@@ -25,4 +25,7 @@ export default {
   background-image: url('./assets/bg.jpg');
   @apply min-h-screen w-screen bg-cover bg-center
 }
+nav .router-link-active {
+  @apply bg-green-600 text-green-200 transition-all duration-300 !important
+}
 </style>
