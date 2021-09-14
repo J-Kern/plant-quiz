@@ -29,11 +29,6 @@ const routes = [
         component: () => import(/* webpackChunkName: "about" */ '../views/Quiz/Question.vue')
       }
     ]
-  },
-  {
-    path: '/*',
-    name: 'Home',
-    component: Home
   }
 ]
 
