@@ -1,5 +1,5 @@
 <template>
-  <div class="gallery flex flex-wrap items-center justify-center">
+  <div class="container flex flex-wrap items-center justify-center">
     <div v-for="plant in plants" :key="plant.id">
       <PlantCard class="plant-card" :plant="plant" />
     </div>
@@ -18,15 +18,12 @@ export default {
   },
   components: {
       PlantCard
-  },
-  mounted() {
-    console.log(this.$props.plants)
   }
 };
 </script>
 
 <style scoped>
   .plant-card {
-    @apply max-w-xs m-8
+    @apply max-w-xs mx-8 my-12
   }
 </style>
