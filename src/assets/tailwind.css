@@ -15,6 +15,6 @@
         @apply text-transparent bg-clip-text bg-gradient-to-r from-meridian-start to-meridian-end !important
     }
     .bg-glass-morphic {
-        @apply bg-opacity-75 backdrop-filter backdrop-blur-lg !important
+        @apply bg-opacity-80 backdrop-filter backdrop-blur-lg !important
     }
 }

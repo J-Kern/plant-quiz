@@ -1,24 +1,32 @@
 <template>
-  <div class="gallery">
-    <PlantCard v-for="plant in plants" :key="plant.id" plant="plant" />
+  <div class="gallery flex flex-wrap items-center justify-center">
+    <div v-for="plant in plants" :key="plant.id">
+      <PlantCard class="plant-card" :plant="plant" />
+    </div>
   </div>
 </template>
 
 <script>
 import PlantCard from "@/components/PlantCard/PlantCard";
+const _plants = require("@/data/plants");
 export default {
   name: 'Gallery',
-  props: [
-    'plants'
-  ],
-  components: [
+  props: {
+    plants: {
+      type: Object,
+    }
+  },
+  components: {
       PlantCard
-  ]
-  // computed() {
-  //   return this.plants[Math.floor(Math.random()*this.plants.length)].id;
-  // },
-  // mounted() {
-  //   this.plant = this.plants[Math.floor(Math.random()*this.plants.length)];
-  // }
+  },
+  mounted() {
+    console.log(this.$props.plants)
+  }
 };
 </script>
+
+<style scoped>
+  .plant-card {
+    @apply max-w-xs m-8
+  }
+</style>

@@ -2,7 +2,7 @@
     <div class="container rounded-xl mx-auto my-6 flex flex-col items-center justify-center bg-white bg-glass-morphic text-black">
         <h1>Hello Quiz!</h1>
         <router-link :to="{ name:'Question', params: { id: this.plant.id }}" :props="this.plant">Hello World!</router-link>
-        <router-view :props="this.plant"></router-view>
+        <router-view plant="this.plant"></router-view>
       <div v-for="_plant in plants">
         <div v-text="_plant.id"></div>
         <div v-text="_plant.latinName"></div>

@@ -1,8 +1,8 @@
 <template>
   <TheHeader />
-  <div class="min-h-full w-full">
-    <div class="container mx-auto mt-8 p-6 bg-white bg-glass-morphic rounded-3xl">
-      <router-view plants="this.data.staticData.plants"/>
+  <div class="min-h-full w-screen ">
+    <div class="container mx-auto mt-8 bg-gray-100 rounded-3xl">
+      <router-view v-bind:plants="this.$data._data.plants"/>
     </div>
   </div>
 </template>
@@ -18,8 +18,12 @@ export default {
   },
   data() {
     return {
-      staticData: staticData
+      _data: staticData
     }
+  },
+  mounted() {
+    console.log(staticData);
+    console.log(this.$data._data);
   }
 }
 </script>
@@ -27,7 +31,7 @@ export default {
 <style>
 #app {
   background-image: url('./assets/bg.jpg');
-  @apply min-h-screen w-screen bg-cover bg-center
+  @apply min-h-screen w-screen bg-cover bg-center bg-fixed relative
 }
 nav .router-link-active {
   @apply bg-green-600 text-green-200 transition-all duration-300 !important
