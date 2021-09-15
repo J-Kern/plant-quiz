@@ -1,7 +1,9 @@
 <template>
   <TheHeader />
   <div class="min-h-full w-full">
-    <router-view :key="this.staticData" />
+    <div class="container mx-auto mt-8 p-6 bg-white bg-glass-morphic rounded-3xl">
+      <router-view plants="this.data.staticData.plants"/>
+    </div>
   </div>
 </template>
 
@@ -15,7 +17,9 @@ export default {
     TheHeader
   },
   data() {
-    return staticData
+    return {
+      staticData: staticData
+    }
   }
 }
 </script>

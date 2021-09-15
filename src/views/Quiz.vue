@@ -18,7 +18,7 @@
     export default {
       name: 'Quiz',
       props: [
-          'model'
+          'plants'
       ],
       // computed() {
       //   return this.plants[Math.floor(Math.random()*this.plants.length)].id;
